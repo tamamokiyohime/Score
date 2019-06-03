@@ -81,6 +81,7 @@ namespace Score
             //ds.Tables[0].Columns.Add("Score");
 
             string AllData = s.ReadToEnd();
+            AllData = AllData.TrimEnd('\n');
             string[] rows = AllData.Split('\n');
 
             foreach (string r in rows)
