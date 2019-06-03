@@ -63,6 +63,16 @@ namespace Score.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap _70101670_p0_master1200 {
+            get {
+                object obj = ResourceManager.GetObject("70101670_p0_master1200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap by_nc_sa {
             get {
                 object obj = ResourceManager.GetObject("by-nc-sa", resourceCulture);

@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cb7ii-v9oqy-001.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -82,6 +85,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\by-nc-sa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cb7ii-v9oqy-001.ico" />
+    <Content Include="Resources\70101670_p0_master1200.png" />
+    <None Include="Resources\70101670_p0_master12001.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

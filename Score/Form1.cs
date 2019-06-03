@@ -271,7 +271,7 @@ namespace Score
             else
             {
                 FileStr = output_path.SelectedPath + "\\";
-                FileStr += "Posted_" + input_path.SafeFileName;
+                FileStr += "Output_" + input_path.SafeFileName;
             }
             
             StreamWriter wr = new StreamWriter(FileStr, false, Encoding.Default);

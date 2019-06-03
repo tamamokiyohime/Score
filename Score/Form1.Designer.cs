@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.last5 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -35,6 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.score = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cutting_word = new System.Windows.Forms.TextBox();
             this.SaveDT = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.IPath = new System.Windows.Forms.TextBox();
@@ -46,8 +49,6 @@
             this.search = new System.Windows.Forms.Button();
             this.names_com = new System.Windows.Forms.ComboBox();
             this.Enter = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cutting_word = new System.Windows.Forms.TextBox();
             this.Input_col = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.AddNewCol = new System.Windows.Forms.Button();
@@ -55,14 +56,16 @@
             this.NewCol_Name = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Input_Limit = new System.Windows.Forms.CheckBox();
             this.limit = new System.Windows.Forms.TextBox();
+            this.Input_Limit = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,6 +153,27 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "檔案設定";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(24, 62);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 19);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "分割字元：";
+            // 
+            // cutting_word
+            // 
+            this.cutting_word.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cutting_word.Location = new System.Drawing.Point(114, 59);
+            this.cutting_word.Name = "cutting_word";
+            this.cutting_word.Size = new System.Drawing.Size(25, 25);
+            this.cutting_word.TabIndex = 15;
+            this.cutting_word.Text = ",";
+            this.cutting_word.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // SaveDT
             // 
@@ -291,27 +315,6 @@
             this.Enter.UseVisualStyleBackColor = false;
             this.Enter.Click += new System.EventHandler(this.Enter_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(24, 62);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 19);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "分割字元：";
-            // 
-            // cutting_word
-            // 
-            this.cutting_word.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cutting_word.Location = new System.Drawing.Point(114, 59);
-            this.cutting_word.Name = "cutting_word";
-            this.cutting_word.Size = new System.Drawing.Size(25, 25);
-            this.cutting_word.TabIndex = 15;
-            this.cutting_word.Text = ",";
-            this.cutting_word.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Input_col
             // 
             this.Input_col.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -397,6 +400,7 @@
             this.groupBox3.Controls.Add(this.score);
             this.groupBox3.Controls.Add(this.search);
             this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.pictureBox2);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
@@ -407,26 +411,26 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "資料編修";
             // 
-            // Input_Limit
-            // 
-            this.Input_Limit.AutoSize = true;
-            this.Input_Limit.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Input_Limit.Location = new System.Drawing.Point(368, 32);
-            this.Input_Limit.Name = "Input_Limit";
-            this.Input_Limit.Size = new System.Drawing.Size(92, 24);
-            this.Input_Limit.TabIndex = 14;
-            this.Input_Limit.Text = "驗證輸入";
-            this.Input_Limit.UseVisualStyleBackColor = true;
-            // 
             // limit
             // 
             this.limit.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.limit.Location = new System.Drawing.Point(368, 53);
+            this.limit.Location = new System.Drawing.Point(368, 44);
             this.limit.Name = "limit";
             this.limit.Size = new System.Drawing.Size(92, 25);
             this.limit.TabIndex = 15;
             this.limit.Text = "100";
             this.limit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Input_Limit
+            // 
+            this.Input_Limit.AutoSize = true;
+            this.Input_Limit.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Input_Limit.Location = new System.Drawing.Point(368, 23);
+            this.Input_Limit.Name = "Input_Limit";
+            this.Input_Limit.Size = new System.Drawing.Size(92, 24);
+            this.Input_Limit.TabIndex = 14;
+            this.Input_Limit.Text = "驗證輸入";
+            this.Input_Limit.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -439,8 +443,21 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Design By Kiyohime - CC BY-NC-SA 3.0 TW";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Score.Properties.Resources._70101670_p0_master1200;
+            this.pictureBox2.InitialImage = global::Score.Properties.Resources.by_nc_sa;
+            this.pictureBox2.Location = new System.Drawing.Point(368, 75);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(139, 99);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Score.Properties.Resources.by_nc_sa;
             this.pictureBox1.InitialImage = global::Score.Properties.Resources.by_nc_sa;
             this.pictureBox1.Location = new System.Drawing.Point(971, 499);
@@ -463,6 +480,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -475,6 +493,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -514,6 +533,7 @@
         private System.Windows.Forms.CheckBox Input_Limit;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
