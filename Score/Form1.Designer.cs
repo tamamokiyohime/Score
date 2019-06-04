@@ -58,8 +58,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.limit = new System.Windows.Forms.TextBox();
             this.Input_Limit = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -324,6 +324,7 @@
             this.Input_col.Size = new System.Drawing.Size(120, 25);
             this.Input_col.TabIndex = 15;
             this.Input_col.SelectedIndexChanged += new System.EventHandler(this.Input_col_SelectedIndexChanged);
+            this.Input_col.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Input_col_KeyDown);
             // 
             // label7
             // 
@@ -432,17 +433,6 @@
             this.Input_Limit.Text = "驗證輸入";
             this.Input_Limit.UseVisualStyleBackColor = true;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(597, 510);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(360, 19);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Design By Kiyohime - CC BY-NC-SA 3.0 TW";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
@@ -454,6 +444,17 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(597, 510);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(360, 19);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Design By Kiyohime - CC BY-NC-SA 3.0 TW";
             // 
             // pictureBox1
             // 
@@ -484,7 +485,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "快速成績輸入系統 V1.0";
+            this.Text = "快速成績輸入系統 V1.1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

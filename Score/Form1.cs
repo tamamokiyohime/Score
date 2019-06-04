@@ -199,6 +199,17 @@ namespace Score
         {
             if (e.KeyCode == Keys.Enter)
             {
+                ComboboxItem item = names_com.Items[names_com.SelectedIndex] as ComboboxItem;
+                ComboboxItem tar_col = Input_col.Items[Input_col.SelectedIndex] as ComboboxItem;
+                int select_index = int.Parse(item.Value.ToString());
+                int select_col = int.Parse(tar_col.Value.ToString());
+                try
+                {
+                    score.Text = InputDT.Rows[select_index][select_col].ToString();
+                }catch(Exception ex)
+                {
+                    //score.Text = "";
+                }
                 score.Focus();
                 score.SelectAll();
             }
@@ -215,19 +226,23 @@ namespace Score
             try
             {
                 limit_int = int.Parse(limit.Text.ToString());
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
-                limit.Text = "";
+                limit.Text = "100";
                 Input_Limit.Checked = false;
+                MessageBox.Show("Wrong Value Res");
             }
             bool check = true;
             if (Input_Limit.Checked)
             {
-                if (int.Parse(score.Text.ToString()) <= limit_int){
-                    check = false;
+                if (int.Parse(score.Text.ToString()) <= limit_int)
+                {
+
                 }
                 else
                 {
+                    check = false;
                     MessageBox.Show("Out of Limit");
                     score.SelectAll();
                     score.Focus();
@@ -300,6 +315,8 @@ namespace Score
             }
             wr.Dispose();
             wr.Close();
+            last5.SelectAll();
+            last5.Focus();
         }
 
         private void names_com_SelectedIndexChanged(object sender, EventArgs e)
@@ -378,6 +395,15 @@ namespace Score
             Enter.BackColor = Color.White;
             SaveDT.Enabled = false;
             SaveDT.BackColor = Color.White;
+        }
+
+        private void Input_col_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                last5.Focus();
+                last5.SelectAll();
+            }
         }
     }
 }
